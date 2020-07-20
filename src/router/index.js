@@ -6,6 +6,7 @@ import SoftwareCenter from "@views/software/SoftwareCenter";
 import ManageCenter from "@views/manage/ManageCenter";
 import SoftwareManage from "@views/manage/SoftwareManage";
 import UserInfo from "@views/userInfo/UserInfo";
+import RecordCenter from "@views/record/RecordCenter";
 Vue.use(VueRouter)
 
   const routes = [
@@ -56,6 +57,14 @@ Vue.use(VueRouter)
                   path: '/index/softwareCenter',
                   name: '软件中心',
                   component: SoftwareCenter,
+                  meta: {
+                      requireAuth: true
+                  }
+              },
+              {
+                  path: '/index/recordCenter',
+                  name: '记录中心',
+                  component: RecordCenter,
                   meta: {
                       requireAuth: true
                   }
